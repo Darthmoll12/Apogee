@@ -1,0 +1,30 @@
+[project]
+name = "apogee-python-utils"
+version = "0.1.0"
+readme = "README.md"
+authors = [
+    { name = "Nathaniel Moll", email = "ncmoll@liberty.edu" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.1.1",
+    "pyarrow>=26.0.1",
+    "scipy>=1.18.1",
+]
+
+[project.scripts]
+apogee-python-utils = "apogee_python_utils:main"
+
+[build-system]
+requires = ["uv_build>=0.12.21,<0.13.0"]
+build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "pre-commit>=4.7.0",
+    "pyrefly>=1.4.1",
+    "pytest>=9.2.0",
+    "ruff>=0.17.4",
+]
